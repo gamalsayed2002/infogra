@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 3000px;
+}
+:root {
+  --main-text-color: whitesmoke;
+  --color1: #7f43ff;
+  --color2: #492e88;
+  --color3: #a02d6f;
+}
+.container {
+  margin: 0 auto;
+}
+
+/*small*/
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*medium*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*larg*/
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start nav */
+header {
+  /*background-color: rgba(0 0 0 /50%);
+ */
+  backdrop-filter: blur(10);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  transition: 0.5s all ease-in-out;
+
+  z-index: 100;
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -ms-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+  position: fixed;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  color: var(--main-text-color);
+  font-size: larger;
+  letter-spacing: 8px;
+}
+header nav ul {
+  display: flex;
+  gap: 15px;
+}
+header nav ul li {
+}
+header nav ul li a {
+  color: var(--main-text-color);
+  font-size: large;
+}
+/* start menu */
+header nav .menu {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  width: 2.3rem;
+  cursor: pointer;
+  display: none;
+}
+.menu div {
+  height: 0.3rem;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 5px;
+  transition: 0.5s all ease-in-out;
+}
+
+/* start media for nav */
+@media (max-width: 770px) {
+  header nav {
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+  }
+  header nav ul {
+    display: none;
+  }
+
+  header nav ul li a {
+  }
+  header nav .menu {
+    display: block;
+  }
+}
+/* js class for header */
+.sticky {
+  position: sticky !important;
+  top: 0 !important;
+}
+.show {
+  display: block;
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0 0 0 / 70%);
+  border-radius: 10px;
+  padding: 20px 0;
+  width: 500px;
+  max-width: 90%;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.line-1-clicked {
+  transform: rotate(45deg) translateY(0.5em) translateX(0.6em);
+}
+
+.line-2-clicked {
+  transform: rotate(-45deg) translateY(0.10em) translateX(0em);
+}
+.line-3-clicked {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* START MAIN */
+main {
+  width: 100%;
+  background-image: url("imgs/landing\ bg\ 2.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0 0 0 / 60%);
+  z-index: 1;
+}
+
+main .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--main-text-color);
+}
+main .container .first_head {
+  text-align: center;
+  z-index: 2;
+}
+main .container .first_head h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+main .container .first_head p {
+  font-size: 30px;
+}
+main .container .sec-head {
+  z-index: 2;
+  margin-top: 40px;
+}
+main .container .sec-head ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+main .container .sec-head ul li {
+}
+main .container .sec-head ul li a {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+main .container .sec-head ul li a img {
+  width: 40px;
+}

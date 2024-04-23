@@ -315,7 +315,8 @@ main .container .sec-head ul li a img {
   max-width: 90%;
   height: 200px;
   max-height: 200px;
-  /* overflow: scroll; */
+  
+  overflow: scroll;
   padding: 10px;
 }
 .services-section .container .box::-webkit-scrollbar {

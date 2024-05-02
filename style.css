@@ -380,12 +380,13 @@ main .container .sec-head ul li a img {
 }
 .contact-section .container div {
   flex: 1;
-  background: var(--color3);
+
   border-radius: 10px;
   padding: 10px;
 }
-.contact-section .container div iframe {
+.contact-section .container div img {
  border-radius: inherit;
+ width: 100%;
 }
 .contact-section .container form {
   flex: 1;
@@ -445,9 +446,7 @@ cursor: pointer;
   .contact-section .container div{
     width: 40%;
   }
-  .contact-section .container div iframe{
-    width: 100%;
-  }
+
 }
 @media (max-width:750px){
   .contact-section .container{
@@ -455,6 +454,10 @@ flex-direction: column-reverse;
   }
   .contact-section .container div{
     width: 95%;
+    display: none;
+  }
+  .contact-section .container div img{
+
   }
   .contact-section .container form{
     width: 95%;
